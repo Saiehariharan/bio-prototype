@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeneGuard Audit Logs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand sidebar-brand">
+          <span class="brand-mark">🧬</span>
+          <span>GeneGuard</span>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <nav class="sidebar-nav">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="genetic-data.html">Genetic Records</a>
+          <a href="alerts.html">Security Alerts</a>
+          <a href="audit-logs.html" class="active">Audit Logs</a>
+          <a href="users.html">Users</a>
+          <a href="consent.html">Consent</a>
+          <a href="settings.html">Settings</a>
+          <a href="login.html" id="logoutBtn">Logout</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar-panel">
+          <div>
+            <span class="eyebrow light">Compliance Trail</span>
+            <h1>Audit Logs</h1>
+          </div>
+          <div class="user-badge" id="userBadge">Loading...</div>
+        </header>
+
+        <section class="panel glass alerts-panel">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>User</th>
+                  <th>Role</th>
+                  <th>Action</th>
+                  <th>Resource</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody id="auditTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/audit.js"></script>
+  </body>
+</html>

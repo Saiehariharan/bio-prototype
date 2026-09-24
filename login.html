@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeneGuard Login</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+  <body class="login-body">
+    <div class="login-shell">
+      <div class="login-visual glass">
+        <div class="brand brand-login">
+          <span class="brand-mark">🧬</span>
+          <span>GeneGuard</span>
+        </div>
+        <h1>Secure Access Portal</h1>
+        <p>Protecting sensitive genetic identity data with active behavioral monitoring.</p>
+        <div class="dna-strip">
+          <span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span>
+        </div>
+        <div class="mini-info">
+          <div>
+            <strong>92</strong>
+            <small>Security score</small>
+          </div>
+          <div>
+            <strong>24/7</strong>
+            <small>Monitoring</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="login-card glass">
+        <div class="card-header">
+          <span class="eyebrow light">Demo Secure Login</span>
+          <h2>Welcome back</h2>
+        </div>
+
+        <form id="loginForm" class="login-form">
+          <label>
+            <span>User ID</span>
+            <input type="text" id="userId" placeholder="Enter User ID" required />
+          </label>
+
+          <label>
+            <span>Password</span>
+            <div class="password-wrap">
+              <input type="password" id="password" placeholder="Enter Password" required />
+              <button type="button" id="togglePassword" class="toggle-password" aria-label="Show password">Show</button>
+            </div>
+          </label>
+
+          <label>
+            <span>Role</span>
+            <select id="role" required>
+              <option value="">Select your role</option>
+              <option value="Admin">Admin</option>
+              <option value="Doctor">Doctor</option>
+              <option value="Researcher">Researcher</option>
+              <option value="Patient">Patient</option>
+            </select>
+          </label>
+
+          <button type="submit" class="btn btn-primary btn-block">Login</button>
+        </form>
+
+        <div id="loginMessage" class="login-message"></div>
+
+        <div class="demo-credentials">
+          <p>Demo credentials</p>
+          <ul>
+            <li><strong>ADMIN:</strong> ADMIN001 / Admin@123</li>
+            <li><strong>DOCTOR:</strong> DOC001 / Doctor@123</li>
+            <li><strong>RESEARCHER:</strong> RES001 / Research@123</li>
+            <li><strong>PATIENT:</strong> PAT001 / Patient@123</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+  </body>
+</html>

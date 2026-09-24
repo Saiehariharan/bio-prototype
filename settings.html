@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeneGuard Settings</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand sidebar-brand">
+          <span class="brand-mark">🧬</span>
+          <span>GeneGuard</span>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <nav class="sidebar-nav">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="genetic-data.html">Genetic Records</a>
+          <a href="alerts.html">Security Alerts</a>
+          <a href="audit-logs.html">Audit Logs</a>
+          <a href="users.html">Users</a>
+          <a href="consent.html">Consent</a>
+          <a href="settings.html" class="active">Settings</a>
+          <a href="login.html" id="logoutBtn">Logout</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar-panel">
+          <div>
+            <span class="eyebrow light">System Policies</span>
+            <h1>Security Settings</h1>
+          </div>
+          <div class="user-badge" id="userBadge">Loading...</div>
+        </header>
+
+        <section class="panel glass alerts-panel">
+          <div class="consent-list">
+            <div class="consent-item">
+              <div>
+                <strong>Authentication Guard</strong>
+                <p>Blocks repeated invalid login attempts after five failures.</p>
+              </div>
+              <button class="toggle on" aria-label="Authentication Guard toggle"></button>
+            </div>
+            <div class="consent-item">
+              <div>
+                <strong>Behavior Analysis</strong>
+                <p>Monitors abnormal data access patterns and restricts suspicious actions.</p>
+              </div>
+              <button class="toggle on" aria-label="Behavior Analysis toggle"></button>
+            </div>
+            <div class="consent-item">
+              <div>
+                <strong>Audit Logging</strong>
+                <p>Records all critical security activity to the local demo store.</p>
+              </div>
+              <button class="toggle on" aria-label="Audit Logging toggle"></button>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

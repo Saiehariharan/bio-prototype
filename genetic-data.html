@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeneGuard | Genetic Records</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand sidebar-brand">
+          <span class="brand-mark">🧬</span>
+          <span>GeneGuard</span>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <nav class="sidebar-nav">
+          <a href="dashboard.html">Dashboard</a>
+          <a href="genetic-data.html" class="active">Genetic Records</a>
+          <a href="alerts.html">Security Alerts</a>
+          <a href="audit-logs.html">Audit Logs</a>
+          <a href="users.html">Users</a>
+          <a href="consent.html">Consent</a>
+          <a href="settings.html">Settings</a>
+          <a href="login.html" id="logoutBtn">Logout</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar-panel">
+          <div>
+            <span class="eyebrow light">Protected Data</span>
+            <h1>Genetic Records</h1>
+          </div>
+          <div class="user-badge" id="userBadge">Loading...</div>
+        </header>
+
+        <section class="records-grid" id="recordsGrid"></section>
+      </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/genetic-data.js"></script>
+  </body>
+</html>

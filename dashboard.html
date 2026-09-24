@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GeneGuard Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+  </head>
+  <body class="dashboard-body">
+    <div class="app-shell">
+      <aside class="sidebar">
+        <div class="brand sidebar-brand">
+          <span class="brand-mark">🧬</span>
+          <span>GeneGuard</span>
+        </div>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">☰</button>
+        <nav class="sidebar-nav">
+          <a href="dashboard.html" class="active">Dashboard</a>
+          <a href="genetic-data.html">Genetic Records</a>
+          <a href="alerts.html">Security Alerts</a>
+          <a href="audit-logs.html">Audit Logs</a>
+          <a href="users.html">Users</a>
+          <a href="consent.html">Consent</a>
+          <a href="settings.html">Settings</a>
+          <a href="login.html" id="logoutBtn">Logout</a>
+        </nav>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar-panel">
+          <div>
+            <span class="eyebrow light">Protected Operations</span>
+            <h1 id="pageTitle">Dashboard</h1>
+          </div>
+          <div class="user-badge" id="userBadge">Loading...</div>
+        </header>
+
+        <section class="stats-grid" id="statsGrid"></section>
+
+        <section class="content-grid">
+          <div class="panel glass large-panel">
+            <div class="panel-header">
+              <h3>Recent Security Activity</h3>
+              <div class="status-badges">
+                <span class="status-badge normal">Normal</span>
+                <span class="status-badge warning">Warning</span>
+                <span class="status-badge threat">Threat</span>
+              </div>
+            </div>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Time</th>
+                    <th>User</th>
+                    <th>Role</th>
+                    <th>Action</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody id="activityTableBody"></tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="panel glass companion-panel">
+            <div class="panel-header">
+              <h3>Security Score</h3>
+            </div>
+            <div class="score-card">
+              <div class="score-circle">92</div>
+              <div class="score-meta">
+                <p>Authentication: Secure</p>
+                <p>Access Control: Secure</p>
+                <p>Data Protection: Secure</p>
+                <p>Behavior Monitoring: Active</p>
+                <p>Threat Detection: Active</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel glass bottom-panel" id="rolePanel"></section>
+      </main>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>
